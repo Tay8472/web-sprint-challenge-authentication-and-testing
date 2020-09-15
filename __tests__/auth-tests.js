@@ -13,7 +13,7 @@ describe("Register Tests", () => {
       .send({ username: "taylor", password: "12345" });
     expect(res.statusCode).toBe(201);
     expect(res.type).toBe("application/json");
-    expect(res.body.username).toBe("taylor4");
+    expect(res.body.username).toBe("taylor");
   });
 
   it("Test Username Taken", async () => {
@@ -44,6 +44,14 @@ describe("Login Tests", () => {
   });
 });
 
-// describe("Jokes Tests", () => {
-//     it("")
-// })
+// describe("Joke Tests", () => {
+//   it("Test Type", async () => {
+//     let res = await supertest(server).get("/api/jokes");
+//     expect(res.type).toBe("application/json");
+//   });
+//   it("Test Length", async () => {
+//     let res = await supertest(server).get("/api/jokes");
+//     expect(res.statusCode).toBe(200);
+//     expect(res.body.length).toBeGreaterThanOrEqual(4);
+//   });
+// });
